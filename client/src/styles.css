@@ -1,0 +1,163 @@
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	margin: 0;
+	padding: 20px;
+	color: #333;
+}
+
+.app {
+	max-width: 1200px;
+	margin: 0 auto;
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+}
+
+h1 {
+	text-align: center;
+	color: #2c3e50;
+	margin-bottom: 10px;
+}
+
+.instructions {
+	text-align: center;
+	background: #ecf0f1;
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	color: #7f8c8d;
+}
+
+.layout {
+	display: flex;
+	gap: 40px;
+	align-items: flex-start;
+}
+
+.inventory {
+	flex: 0 0 250px;
+	background: #f8f9fa;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.inventory h2 {
+	margin-top: 0;
+	color: #34495e;
+}
+
+.inv-item {
+	border: 2px solid #e9ecef;
+	padding: 12px;
+	margin-bottom: 10px;
+	cursor: grab;
+	border-radius: 6px;
+	transition: all 0.2s;
+	background: white;
+}
+
+.inv-item:hover {
+	border-color: #007bff;
+	box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.inv-item:active {
+	cursor: grabbing;
+}
+
+.grid {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.grid-row {
+	display: flex;
+	gap: 8px;
+}
+
+.grid-cell {
+	width: 100px;
+	height: 80px;
+	border: 2px dashed #bdc3c7;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #ecf0f1;
+	border-radius: 6px;
+	transition: all 0.2s;
+	position: relative;
+}
+
+.grid-cell:hover {
+	border-color: #3498db;
+	background: #d5dbdb;
+}
+
+.grid-cell .coord {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	font-size: 10px;
+	color: #95a5a6;
+}
+
+.item {
+	padding: 6px;
+	border-radius: 4px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.item .weight {
+	font-size: 10px;
+	opacity: 0.8;
+}
+
+.red {
+	background: linear-gradient(45deg, #e74c3c, #c0392b);
+}
+.blue {
+	background: linear-gradient(45deg, #3498db, #2980b9);
+}
+.green {
+	background: linear-gradient(45deg, #27ae60, #229954);
+}
+
+.empty {
+	color: #7f8c8d;
+	font-style: italic;
+}
+
+.message {
+	padding: 12px;
+	background: #ffeaa7;
+	border: 1px solid #f39c12;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	color: #d68910;
+}
+
+button {
+	padding: 10px 20px;
+	background: #e74c3c;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+	font-size: 14px;
+	transition: background 0.2s;
+}
+
+button:hover {
+	background: #c0392b;
+}

@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: shelving
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: shelvingdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  server:
+    build:
+      context: ./server
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://shelving:pass@db:5432/shelvingdb
+      PORT: 4000
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./server:/usr/src/app
+    command: ["npm","run","dev"]
+
+volumes:
+  db-data:
