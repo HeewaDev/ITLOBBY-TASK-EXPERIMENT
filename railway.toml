@@ -1,0 +1,6 @@
+# This file tells Railway to deploy from subdirectories
+# For backend: deploy from server/ directory
+# For frontend: deploy from client/ directory
+
+[build]
+builder = "NIXPACKS"
